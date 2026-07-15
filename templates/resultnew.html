@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<title>HDI Prediction Result</title>
+
+
+<link rel="stylesheet"
+href="{{ url_for('static', filename='css/style.css') }}">
+
+
+</head>
+
+
+<body>
+
+
+
+
+<!-- NAVBAR -->
+
+
+<nav class="navbar">
+
+
+<div class="logo">
+
+🌍 HDI Predictor
+
+</div>
+
+
+
+<ul>
+
+<li>
+<a href="/">Home</a>
+</li>
+
+
+<li>
+<a href="/predict">Prediction</a>
+</li>
+
+
+<li>
+<a href="/dashboard">Dashboard</a>
+</li>
+
+
+<li>
+<a href="/about">About</a>
+</li>
+
+
+</ul>
+
+
+</nav>
+
+
+
+
+
+
+
+<!-- RESULT MAIN -->
+
+
+<div class="result-container">
+
+
+
+
+
+<h1 class="result-title">
+
+🌍 HDI Prediction Result
+
+</h1>
+
+
+
+
+
+
+
+
+<!-- TWO CARDS -->
+
+
+<div class="result-grid">
+
+
+
+
+
+
+
+<!-- PREDICTION CARD -->
+
+
+<div class="result-card">
+
+
+
+<h2>
+
+📊 Prediction Result
+
+</h2>
+
+
+
+
+<h2>
+
+{{ flag }} {{ data.country }}
+
+</h2>
+
+
+
+
+
+<div class="prediction-box"
+style="color:{{ color }}">
+
+{{ prediction }}
+
+</div>
+
+
+
+
+
+<p class="score-text">
+
+HDI Score :
+
+<b>{{ score }}%</b>
+
+</p>
+
+
+
+
+
+
+
+<div class="progress">
+
+
+<div class="progress-fill"
+
+style="width:{{score}}%;
+background:{{color}}">
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+<br>
+
+
+
+<h3>
+
+Development Level
+
+</h3>
+
+
+
+<p class="level"
+
+style="color:{{color}}">
+
+{{ level }}
+
+</p>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<!-- DETAILS CARD -->
+
+
+<div class="result-card">
+
+
+
+<h2>
+
+📌 Input Details
+
+</h2>
+
+
+
+
+
+<table class="result-table">
+
+
+
+<tr>
+
+<td>
+
+🌍 Country
+
+</td>
+
+
+<td>
+
+{{data.country}}
+
+</td>
+
+
+</tr>
+
+
+
+
+
+<tr>
+
+<td>
+
+🤖 Model
+
+</td>
+
+
+<td>
+
+Machine Learning
+
+</td>
+
+
+</tr>
+
+
+
+
+
+<tr>
+
+<td>
+
+📈 Prediction Value
+
+</td>
+
+
+<td>
+
+{{prediction}}
+
+</td>
+
+
+</tr>
+
+
+
+
+
+<tr>
+
+<td>
+
+⏰ Generated Time
+
+</td>
+
+
+<td>
+
+{{generated_time}}
+
+</td>
+
+
+</tr>
+
+
+
+</table>
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+<!-- RECOMMENDATION -->
+
+
+<div class="recommend-box">
+
+
+
+<h2>
+
+💡 Recommendation
+
+</h2>
+
+
+
+<p>
+
+{{recommendation}}
+
+</p>
+
+
+
+</div>
+
+
+
+
+
+
+
+<!-- BUTTONS -->
+
+
+<div class="button-group">
+
+
+
+
+
+<a href="/download_report">
+
+<button>
+
+⬇ Download Report
+
+</button>
+
+</a>
+
+
+
+
+
+
+
+<a href="/predict">
+
+<button>
+
+🔍 Predict Again
+
+</button>
+
+</a>
+
+
+
+
+
+
+
+<a href="/dashboard">
+
+<button>
+
+📊 Dashboard
+
+</button>
+
+</a>
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+</div>
+
+
+
+
+
+</body>
+
+</html>

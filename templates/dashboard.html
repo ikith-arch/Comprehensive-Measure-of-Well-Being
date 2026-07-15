@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>HDI Analytics Dashboard</title>
+
+
+<link rel="stylesheet"
+href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+
+<body>
+
+
+
+<!-- NAVBAR -->
+
+<nav class="navbar">
+
+
+<div class="logo">
+
+🌍 HDI Predictor
+
+</div>
+
+
+
+<ul>
+
+
+<li>
+<a href="/">Home</a>
+</li>
+
+
+<li>
+<a href="/predict">Prediction</a>
+</li>
+
+
+<li>
+<a href="/dashboard">Dashboard</a>
+</li>
+
+
+<li>
+<a href="/about">About</a>
+</li>
+
+
+</ul>
+
+
+</nav>
+
+
+
+
+
+
+<!-- DASHBOARD -->
+
+
+
+<div class="dashboard-container">
+
+
+
+<h1>
+
+📊 HDI Analytics Dashboard
+
+</h1>
+
+
+
+
+<p class="subtitle">
+
+Human Development Index analysis using Machine Learning
+
+</p>
+
+
+
+
+
+
+<!-- STATISTICS -->
+
+
+<div class="cards">
+
+
+
+<div class="card">
+
+
+<div class="icon">
+
+🌍
+
+</div>
+
+
+<h2>
+
+{{total}}
+
+</h2>
+
+
+<p>
+
+Total Countries
+
+</p>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="card">
+
+
+<div class="icon">
+
+📈
+
+</div>
+
+
+<h2>
+
+{{avg}}
+
+</h2>
+
+
+<p>
+
+Average HDI
+
+</p>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="card">
+
+
+<div class="icon">
+
+🏆
+
+</div>
+
+
+<h2>
+
+{{highest}}
+
+</h2>
+
+
+<p>
+
+Highest HDI Country
+
+</p>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="card">
+
+
+<div class="icon">
+
+📉
+
+</div>
+
+
+<h2>
+
+{{lowest}}
+
+</h2>
+
+
+<p>
+
+Lowest HDI Country
+
+</p>
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<!-- MODEL CARD -->
+
+
+<div class="info-box">
+
+
+
+<h2>
+
+🤖 Machine Learning Model
+
+</h2>
+
+
+
+<div class="model-details">
+
+
+<p>
+
+Algorithm :
+
+<b>
+Linear Regression
+</b>
+
+</p>
+
+
+
+<p>
+
+Model Accuracy :
+
+<b>
+{{accuracy}}%
+</b>
+
+</p>
+
+
+
+<p>
+
+Generated :
+
+<b>
+{{current_time}}
+</b>
+
+</p>
+
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+<!-- VISUALIZATION -->
+
+
+<h2 class="section-title">
+
+📊 Data Visualization
+
+</h2>
+
+
+
+
+
+<div class="chart-container">
+
+
+
+
+
+<div class="chart-card">
+
+
+<h3>
+
+🏆 Top 10 Countries by HDI
+
+</h3>
+
+
+
+<img
+
+src="{{ url_for('static', filename='images/top10_hdi.png') }}"
+
+alt="Top HDI Chart"
+
+>
+
+
+</div>
+
+
+
+
+
+
+
+
+<div class="chart-card">
+
+
+<h3>
+
+📊 HDI Distribution
+
+</h3>
+
+
+
+<img
+
+src="{{ url_for('static', filename='images/hdi_distribution.png') }}"
+
+alt="HDI Distribution"
+
+>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="chart-card">
+
+
+<h3>
+
+🔗 Feature Correlation
+
+</h3>
+
+
+
+<img
+
+src="{{ url_for('static', filename='images/correlation.png') }}"
+
+alt="Correlation"
+
+>
+
+
+</div>
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+<br><br>
+
+
+
+<a href="/predict">
+
+
+<button>
+
+🔍 Predict HDI
+
+</button>
+
+
+</a>
+
+
+
+
+
+</div>
+
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>HDI Prediction System</title>
+
+
+<link rel="stylesheet"
+href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+
+<body>
+
+
+<!-- ================= NAVBAR ================= -->
+
+
+<nav class="navbar">
+
+
+<div class="logo">
+
+🌍 HDI Predictor
+
+</div>
+
+
+
+<ul>
+
+
+<li>
+<a href="/">Home</a>
+</li>
+
+
+<li>
+<a href="/predict">Prediction</a>
+</li>
+
+
+<li>
+<a href="/dashboard">Dashboard</a>
+</li>
+
+
+<li>
+<a href="/about">About</a>
+</li>
+
+
+</ul>
+
+
+</nav>
+
+
+
+
+
+
+<!-- ================= PREDICTION SECTION ================= -->
+
+
+<div class="prediction-container">
+
+
+
+
+
+<h1>
+
+🔍 HDI Prediction System
+
+</h1>
+
+
+
+
+<p class="subtitle">
+
+Predict and analyze Human Development Index of countries using Machine Learning
+
+</p>
+
+
+
+
+
+
+
+<!-- ================= HOW IT WORKS + FEATURES ================= -->
+
+
+
+<div class="prediction-info">
+
+
+
+
+
+<div class="info-card">
+
+
+<h2>
+
+⚙️ How It Works
+
+</h2>
+
+
+
+<p>
+
+
+<b>Step 1:</b> Select a country from the available list.
+
+
+<br><br>
+
+
+<b>Step 2:</b> Machine Learning model analyzes
+country development indicators.
+
+
+<br><br>
+
+
+<b>Step 3:</b> System predicts HDI score,
+category and provides recommendations.
+
+
+</p>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<div class="info-card">
+
+
+<h2>
+
+✨ System Features
+
+</h2>
+
+
+
+<p>
+
+
+✔ Machine Learning Prediction
+
+
+<br><br>
+
+
+✔ HDI Classification
+
+
+<br><br>
+
+
+✔ Country Development Analysis
+
+
+<br><br>
+
+
+✔ Data Visualization
+
+
+<br><br>
+
+
+✔ Smart Recommendations
+
+
+</p>
+
+
+
+</div>
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<!-- ================= SELECT COUNTRY ================= -->
+
+
+
+<div class="select-card">
+
+
+
+
+
+<h2>
+
+🌍 Select Country
+
+</h2>
+
+
+
+
+<p>
+
+Choose a country to estimate its Human Development Index
+
+</p>
+
+
+
+<br>
+
+
+
+
+
+<form action="/result" method="POST">
+
+
+
+
+
+<select name="country" required>
+
+
+
+<option value="">
+
+-- Select Country --
+
+</option>
+
+
+
+
+
+{% for country in countries %}
+
+
+
+<option value="{{ country }}">
+
+{{ country }}
+
+</option>
+
+
+
+
+{% endfor %}
+
+
+
+
+
+</select>
+
+
+
+
+
+
+<br><br>
+
+
+
+
+
+<button type="submit">
+
+🚀 Predict HDI
+
+</button>
+
+
+
+
+
+</form>
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+</body>
+
+</html>
